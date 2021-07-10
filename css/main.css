@@ -1,1 +1,276 @@
-@import 'modules.css';
+/* Bismillohir Rahmonir Rahiym */
+
+/* SITE-HEADER */
+
+.site-header {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header--action .sitenav--mobile {
+  transform: initial;
+}
+
+.site-header--action .menu-toggle {
+  background-image: url("../img/icon-close.svg");
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  display: block;
+}
+
+.sitenav {
+  display: none;
+}
+
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitenav__link {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sitenav--mobile {
+  display: block;
+  position: absolute;
+  top: 88px;
+  right: 32px;
+  z-index: 10;
+  transform: translateX(calc(100% + 32px));
+  width: 223px;
+  padding: 40px 0;
+  text-align: center;
+  background-color: var(--color-text-primary);
+  transition: transform 0.4s ease;
+}
+
+.sitenav--mobile .sitenav__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.sitenav--mobile .sitenav__link {
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.sitenav--mobile .sitenav__link:active {
+  opacity: 0.6;
+}
+
+.menu-toggle {
+  width: 24px;
+  height: 13px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  outline: none;
+}
+
+/* HERO */
+
+.hero {
+  margin-bottom: 96px;
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__inner::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 271px;
+  margin-bottom: 28px;
+  background-image: url("../img/bg-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.hero__heading {
+  margin-bottom: 28px;
+}
+
+.hero__link {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding-right: 38px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #203a4c;
+  transition: opacity 0.3s ease;
+}
+
+.hero__link:active {
+  opacity: 0.6;
+}
+
+.hero__link::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  margin-right: 38px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url("../img/icon-arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-position 0.3s cubic-bezier(0.5, 0, 0.3, 1.5);
+}
+
+.hero__link:hover::before {
+  background-position: center bottom 5px;
+}
+
+/* ABOUT */
+
+.about {
+  margin-bottom: 115px;
+}
+
+.about__avatar {
+  display: block;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(51, 50, 61, 0.15);
+}
+
+.about__avatar-img {
+  width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.about__text {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(51, 50, 61, 0.15);
+}
+
+.about__heading {
+  margin-bottom: 28px;
+}
+
+.about__paragraph {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* CTA */
+
+.cta {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cta__heading {
+  margin-bottom: 40px;
+}
+
+/* SITE-FOOTER */
+
+.site-footer {
+  padding: 56px 0;
+  text-align: center;
+  background-color: var(--color-text-primary);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer__logo {
+  margin-bottom: 40px;
+}
+
+.footer-nav {
+  margin-bottom: 40px;
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer-nav__link.sitenav__link {
+  color: #fff;
+  transition: color 0.3s ease;
+  transition-property: color, opacity;
+}
+
+.footer-nav__link.sitenav__link:hover {
+  color: var(--color-grey-light);
+}
+
+.social__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social__link {
+  display: flex;
+  color: #fff;
+  transition: color 0.3s ease;
+  transition-property: color, opacity;
+}
+
+.social__link:hover {
+  color: var(--color-grey-light);
+}
+
+.social__link:active {
+  opacity: 0.6;
+}
+
+/* RETINA IMAGES */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hero__inner::before {
+    background-image: url("../img/bg-hero@2x.jpg");
+  }
+}

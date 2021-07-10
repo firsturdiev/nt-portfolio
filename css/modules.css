@@ -1,9 +1,93 @@
+/* Bismillohir Rahmonir Rahiym */
+
+/* FONTS */
+
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/IbarraRealNova-Regular.woff2") format("woff2"),
+    url("../fonts/IbarraRealNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/IbarraRealNova-Bold.woff2") format("woff2"),
+    url("../fonts/IbarraRealNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+    url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* VARIABLES */
 
 :root {
+  --color-text-primary: #33323d;
+  --color-text-secondary: rgb(51, 50, 61, 0.8);
+  --color-grey-light: #5fb4a2;
 }
 
 /* REUSABLES */
+
+.heading {
+  margin: 0;
+  font-family: "Ibarra Real Nova", "Times New Roman", Times, serif;
+  color: var(--color-text-primary);
+}
+
+.heading--primary,
+.heading--secondary {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.36px;
+}
+
+@media screen and (min-width: 1024px) {
+  .heading--primary {
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.45px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 17px 34px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn--light {
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-text-primary);
+  transition-property: background-color, color, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.btn--light:hover {
+  color: #fafafa;
+  background-color: var(--color-text-primary);
+}
+
+.btn--light:active {
+  opacity: 0.6;
+}
 
 /* DEFAULT STYLES */
 
@@ -15,11 +99,17 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Public Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--color-text-secondary);
+  background-color: #fafafa;
 }
 
 img {
@@ -50,9 +140,21 @@ body {
 /* SPECIAL CLASSES */
 
 .container {
-  max-width: 1160px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 32px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
 }
 
 .visually-hidden {
