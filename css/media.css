@@ -6,7 +6,6 @@
   .hero__inner::before {
     width: 100%;
     height: 600px;
-    background-image: url("../img/bg-hero-tablet.jpg");
   }
 
   .hero__text {
@@ -73,20 +72,6 @@
 
 .contact__heading {
   margin-bottom: 32px;
-}
-
-/* RETINA IMAGES */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  .hero__inner::before {
-    background-image: url("../img/bg-hero-tablet@2x.jpg");
-  }
 }
 
 /* ADDITIONALS */
