@@ -261,6 +261,82 @@
   opacity: 0.6;
 }
 
+/* contact.html */
+
+/* CONTACT-HERO */
+
+.contact-hero {
+  margin-bottom: 32px;
+}
+
+.contact-hero__inner {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(51, 50, 61, 0.15);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.15);
+}
+
+.contact-hero__heading {
+  margin-bottom: 24px;
+}
+
+.contact-hero__paragraph {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.contact-hero__social .social__link {
+  color: var(--color-text-primary);
+}
+
+/* CONTACT */
+
+.contact {
+  margin-bottom: 80px;
+}
+
+.contact__heading {
+  margin-bottom: 24px;
+}
+
+.form__fieldset {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border: none;
+}
+
+.form__input {
+  display: block;
+}
+
+.form__input:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.form__input-label {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.form__input-field {
+  width: 100%;
+  display: block;
+  padding: 9px 16px;
+  font-size: 13px;
+  line-height: 30px;
+  background-color: rgba(51, 50, 61, 0.1);
+  border: none;
+  outline: none;
+}
+
+textarea.form__input-field {
+  min-height: 96px;
+  resize: vertical;
+}
+
 /* RETINA IMAGES */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

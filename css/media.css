@@ -55,6 +55,24 @@
       order: 3;
     }
   }
+
+  /* contact.html */
+
+  /* CONTACT-HERO */
+
+  .contact-hero__inner {
+    padding-top: 32px;
+  }
+}
+
+/* CONTACT */
+
+.contact {
+  margin-bottom: 96px;
+}
+
+.contact__heading {
+  margin-bottom: 32px;
 }
 
 /* RETINA IMAGES */
@@ -218,6 +236,50 @@
 
   .cta {
     margin-bottom: 150px;
+  }
+
+  /* contact.html */
+
+  /* CONTACT-HERO */
+
+  .contact-hero {
+    margin-bottom: 47px;
+  }
+
+  .contact-hero__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-hero__heading {
+    width: 350px;
+    flex-shrink: 0;
+    margin-right: 125px;
+    margin-bottom: 0;
+  }
+
+  /* CONTACT */
+
+  .contact {
+    margin-bottom: 110px;
+  }
+
+  .contact__heading {
+    width: 350px;
+    flex-shrink: 0;
+    margin-right: 125px;
+    margin-bottom: 0;
+  }
+
+  .contact__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contact__form {
+    flex-grow: 1;
   }
 
   /* RETINA IMAGES */
