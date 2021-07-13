@@ -1,5 +1,8 @@
 /* Bismillohir Rahmonir Rahiym */
 
+@import "main";
+@import "media";
+
 /* FONTS */
 
 @font-face {
@@ -31,11 +34,9 @@
 
 /* VARIABLES */
 
-:root {
-  --color-text-primary: #33323d;
-  --color-text-secondary: rgb(51, 50, 61, 0.8);
-  --color-grey-light: #5fb4a2;
-}
+$color-text-primary: #33323d;
+$color-text-secondary: rgba(51, 50, 61, 0.8);
+$color-grey-light: #5fb4a2;
 
 /* REUSABLES */
 
@@ -72,32 +73,32 @@
   transition-property: background-color, color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
-}
 
-.btn:active {
-  opacity: 0.6;
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .btn--light {
   color: var(--color-text-primary);
   background-color: transparent;
   border: 1px solid var(--color-text-primary);
-}
 
-.btn--light:hover {
-  color: #fafafa;
-  background-color: var(--color-text-primary);
+  &:hover {
+    color: #fafafa;
+    background-color: var(--color-text-primary);
+  }
 }
 
 .btn--dark {
   color: #fff;
   background-color: #203a4c;
   border: 1px solid #203a4c;
-}
 
-.btn--dark:hover {
-  color: #203a4c;
-  background-color: transparent;
+  &:hover {
+    color: #203a4c;
+    background-color: transparent;
+  }
 }
 
 /* DEFAULT STYLES */

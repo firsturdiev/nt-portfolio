@@ -1,7 +1,5 @@
 /* Bismillohir Rahmonir Rahiym */
-
 /* SITE-HEADER */
-
 .site-header {
   position: relative;
   overflow-x: clip;
@@ -10,7 +8,8 @@
 }
 
 .site-header--action .sitenav--mobile {
-  transform: initial;
+  -webkit-transform: initial;
+          transform: initial;
 }
 
 .site-header--action .menu-toggle {
@@ -18,9 +17,15 @@
 }
 
 .site-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo img {
@@ -52,12 +57,16 @@
   top: 88px;
   right: 32px;
   z-index: 10;
-  transform: translateX(calc(100% + 32px));
+  -webkit-transform: translateX(calc(100% + 32px));
+          transform: translateX(calc(100% + 32px));
   width: 223px;
   padding: 40px 0;
   text-align: center;
-  background-color: var(--color-text-primary);
+  background-color: #33323d;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 .sitenav--mobile .sitenav__item:not(:last-child) {
@@ -66,6 +75,7 @@
 
 .sitenav--mobile .sitenav__link {
   color: #fff;
+  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -87,7 +97,6 @@
 }
 
 /* HERO */
-
 .hero {
   margin-bottom: 96px;
 }
@@ -113,9 +122,15 @@
 }
 
 .hero__link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 38px;
   font-size: 12px;
   line-height: 14px;
@@ -124,6 +139,7 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #203a4c;
+  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -140,6 +156,7 @@
   background-image: url("../img/icon-arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: background-position 0.3s cubic-bezier(0.5, 0, 0.3, 1.5);
   transition: background-position 0.3s cubic-bezier(0.5, 0, 0.3, 1.5);
 }
 
@@ -148,7 +165,6 @@
 }
 
 /* ABOUT */
-
 .about {
   margin-bottom: 115px;
 }
@@ -164,7 +180,8 @@
   width: 100%;
   max-height: 400px;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__text {
@@ -182,7 +199,6 @@
 }
 
 /* CTA */
-
 .cta {
   margin-bottom: 80px;
   text-align: center;
@@ -193,23 +209,26 @@
 }
 
 /* SITE-FOOTER */
-
 .site-footer {
   padding: 56px 0;
   text-align: center;
-  background-color: var(--color-text-primary);
+  background-color: #33323d;
 }
 
 .site-footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.site-footer__logo {
-  margin-bottom: 40px;
-}
-
+.site-footer__logo,
 .footer-nav {
   margin-bottom: 40px;
 }
@@ -226,17 +245,23 @@
 
 .footer-nav__link.sitenav__link {
   color: #fff;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  -webkit-transition-property: color, opacity;
   transition-property: color, opacity;
 }
 
 .footer-nav__link.sitenav__link:hover {
-  color: var(--color-grey-light);
+  color: #5fb4a2;
 }
 
 .social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -247,14 +272,18 @@
 }
 
 .social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #fff;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  -webkit-transition-property: color, opacity;
   transition-property: color, opacity;
 }
 
 .social__link:hover {
-  color: var(--color-grey-light);
+  color: #5fb4a2;
 }
 
 .social__link:active {
@@ -262,9 +291,7 @@
 }
 
 /* contact.html */
-
 /* CONTACT-HERO */
-
 .contact-hero {
   margin-bottom: 32px;
 }
@@ -286,11 +313,10 @@
 }
 
 .contact-hero__social .social__link {
-  color: var(--color-text-primary);
+  color: #33323d;
 }
 
 /* CONTACT */
-
 .contact {
   margin-bottom: 80px;
 }
@@ -326,16 +352,22 @@
   background-color: rgba(51, 50, 61, 0.1);
   border: none;
   outline: none;
-  box-shadow: inset 0 0 2px 1px transparent;
+  -webkit-box-shadow: inset 0 0 2px 1px transparent;
+          box-shadow: inset 0 0 2px 1px transparent;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 .form__input-field:not(:focus):not(:placeholder-shown):valid {
-  box-shadow: inset 0 0 2px 1px #9393c5;
+  -webkit-box-shadow: inset 0 0 2px 1px #9393c5;
+          box-shadow: inset 0 0 2px 1px #9393c5;
 }
 
 .form__input-field:not(:focus):not(:placeholder-shown):invalid {
-  box-shadow: inset 0 0 2px 1px #f43030;
+  -webkit-box-shadow: inset 0 0 2px 1px #f43030;
+          box-shadow: inset 0 0 2px 1px #f43030;
 }
 
 textarea.form__input-field {
@@ -344,15 +376,9 @@ textarea.form__input-field {
 }
 
 /* RETINA IMAGES */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .hero__inner::before {
     background-image: url("../img/bg-hero@2x.jpg");
   }
 }
+/*# sourceMappingURL=main.css.map */
